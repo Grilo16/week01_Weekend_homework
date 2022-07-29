@@ -21,9 +21,9 @@ def get_pets_by_breed(pet_shop, breed):
     return [pet for pet in pet_shop["pets"] if pet["breed"] == breed]
 
 def find_pet_by_name(pet_shop, pet_name):
-    for pet in pet_shop["pets"]:
-        if pet["name"] == pet_name:
-            return pet
+    pet = [pet for pet in pet_shop["pets"] if pet["name"] == pet_name]
+    if len(pet) > 0:
+        return pet[0]
 
 def remove_pet_by_name(pet_shop, pet_name):
     pet_shop["pets"].remove(find_pet_by_name(pet_shop, pet_name))
