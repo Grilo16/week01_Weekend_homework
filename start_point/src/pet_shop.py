@@ -53,5 +53,4 @@ def sell_pet_to_customer(pet_shop, pet, customer):
         add_pet_to_customer(customer, pet)
         remove_pet_by_name(pet_shop, pet["name"])
         increase_pets_sold(pet_shop, 1)
-    else:
-        return
+    return
